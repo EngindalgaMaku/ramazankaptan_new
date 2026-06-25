@@ -1,0 +1,407 @@
+.page {
+  width: 100%;
+}
+
+/* Page Header Banner */
+.headerBanner {
+  position: relative;
+  height: 45vh;
+  min-height: 350px;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  background-image: linear-gradient(135deg, var(--primary-deep) 0%, var(--secondary-teal) 100%);
+  overflow: hidden;
+}
+
+.bannerOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(11, 34, 64, 0.4);
+  z-index: 1;
+}
+
+.bannerContent {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.bannerBadge {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  background-color: var(--accent-gold);
+  color: var(--primary-deep);
+  padding: 6px 14px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+.bannerTitle {
+  font-family: var(--font-heading);
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.bannerSubtitle {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+@media (max-width: 768px) {
+  .headerBanner {
+    height: 40vh;
+    padding: 60px 0 40px;
+  }
+  .bannerTitle {
+    font-size: 2.2rem;
+  }
+  .bannerSubtitle {
+    font-size: 0.95rem;
+  }
+}
+
+/* Tours List Section */
+.toursSection {
+  background-color: #ffffff;
+}
+
+.toursContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.tourItem {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 60px;
+  align-items: flex-start;
+  transition: all var(--transition-normal);
+}
+
+.tourFeaturedItem {
+  background: linear-gradient(180deg, #ffffff 0%, rgba(0, 168, 150, 0.03) 100%);
+  border: 1.5px solid rgba(0, 168, 150, 0.25);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: var(--shadow-md);
+}
+
+.tourFeaturedItem:hover {
+  box-shadow: var(--shadow-premium);
+  border-color: var(--secondary-teal);
+}
+
+.tourReverse {
+  grid-template-columns: 1.2fr 1fr;
+}
+
+.tourReverse .tourImageWrapper {
+  order: 2;
+}
+
+.tourImageWrapper {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  height: 380px;
+  width: 100%;
+}
+
+.tourImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition-slow);
+}
+
+.tourItem:hover .tourImg {
+  transform: scale(1.03);
+}
+
+.badge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: var(--secondary-teal);
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: var(--shadow-md);
+}
+
+.tourFeaturedItem .badge {
+  background-color: var(--accent-gold);
+  color: var(--primary-deep);
+}
+
+.tourInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.tourTitle {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--primary-deep);
+  margin-bottom: 16px;
+}
+
+.tourDesc {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.metaInfo {
+  background-color: var(--bg-light);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.metaItem {
+  display: flex;
+  font-size: 0.95rem;
+  gap: 10px;
+}
+
+.metaItem strong {
+  color: var(--primary-deep);
+  min-width: 130px;
+}
+
+.metaItem span {
+  color: var(--text-dark);
+}
+
+.stopsSection h3 {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--primary-deep);
+  margin-bottom: 16px;
+}
+
+.stopsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 480px) {
+  .stopsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.stopCard {
+  background-color: var(--bg-light);
+  border-left: 3px solid var(--secondary-teal);
+  padding: 16px;
+  border-radius: 0 10px 10px 0;
+}
+
+.stopCard h4 {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--primary-deep);
+  margin-bottom: 6px;
+}
+
+.stopCard p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.bookBtn {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  background-color: #25D366; /* WhatsApp Green */
+  color: #ffffff;
+  padding: 14px 24px;
+  border-radius: 8px;
+  display: inline-block;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);
+  transition: all var(--transition-fast);
+}
+
+.bookBtn:hover {
+  background-color: #20ba59;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.4);
+}
+
+@media (max-width: 991px) {
+  .tourItem, .tourReverse {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .tourReverse .tourImageWrapper {
+    order: 0;
+  }
+  .tourImageWrapper {
+    max-width: 500px;
+    height: 300px;
+    margin: 0 auto;
+  }
+  .tourFeaturedItem {
+    padding: 20px;
+  }
+}
+
+/* Inclusions & Exclusions */
+.inclusionsSection {
+  background-color: #f8fafc;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.sectionBadge {
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--secondary-teal);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.inclusionsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+@media (max-width: 768px) {
+  .inclusionsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.inclusionCard, .exclusionCard {
+  background: var(--bg-card);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+}
+
+.incTitle {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--secondary-teal);
+  margin-bottom: 24px;
+}
+
+.excTitle {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--accent-orange);
+  margin-bottom: 24px;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.list li {
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  line-height: 1.6;
+  position: relative;
+  padding-left: 24px;
+}
+
+.list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.inclusionCard .list li::before {
+  background-color: var(--secondary-teal);
+}
+
+.exclusionCard .list li::before {
+  background-color: var(--accent-orange);
+}
+
+/* Quick Booking Section */
+.bookingSection {
+  background: linear-gradient(135deg, var(--primary-deep) 0%, var(--primary-light) 100%);
+  color: #ffffff;
+}
+
+.bookingGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 60px;
+  align-items: center;
+}
+
+@media (max-width: 991px) {
+  .bookingGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+.bookingText h2 {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  font-weight: 800;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.bookingText p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.formContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}

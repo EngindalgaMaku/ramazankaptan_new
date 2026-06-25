@@ -1,0 +1,375 @@
+.page {
+  width: 100%;
+}
+
+/* Page Header Banner */
+.headerBanner {
+  position: relative;
+  height: 45vh;
+  min-height: 350px;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  background-image: linear-gradient(135deg, var(--primary-deep) 0%, var(--secondary-teal) 100%);
+  overflow: hidden;
+}
+
+.bannerOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(11, 34, 64, 0.4);
+  z-index: 1;
+}
+
+.bannerContent {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.bannerBadge {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  background-color: var(--accent-gold);
+  color: var(--primary-deep);
+  padding: 6px 14px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+.bannerTitle {
+  font-family: var(--font-heading);
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.bannerSubtitle {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+@media (max-width: 768px) {
+  .headerBanner {
+    height: 40vh;
+    padding: 60px 0 40px;
+  }
+  .bannerTitle {
+    font-size: 2.2rem;
+  }
+  .bannerSubtitle {
+    font-size: 0.95rem;
+  }
+}
+
+/* Section Common Layouts */
+.sectionBadge {
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--secondary-teal);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.sectionTitle {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--primary-deep);
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.paragraph {
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+/* Profile Section */
+.profileGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.profileText {
+  display: flex;
+  flex-direction: column;
+}
+
+.profileImageWrapper {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-premium);
+}
+
+.profileImg {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform var(--transition-slow);
+}
+
+.profileImg:hover {
+  transform: scale(1.02);
+}
+
+@media (max-width: 991px) {
+  .profileGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .profileImageWrapper {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+/* Boat Section */
+.boatSection {
+  background-color: #f1f5f9;
+}
+
+.boatGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.boatText {
+  display: flex;
+  flex-direction: column;
+}
+
+.boatImageWrapper {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-premium);
+}
+
+.boatImg {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform var(--transition-slow);
+}
+
+.boatImg:hover {
+  transform: scale(1.02);
+}
+
+.specsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 24px;
+}
+
+@media (max-width: 480px) {
+  .specsGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+.specItem {
+  background: var(--bg-card);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-sm);
+  transition: border-color var(--transition-fast);
+}
+
+.specItem:hover {
+  border-color: var(--secondary-teal);
+}
+
+.specLabel {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+.specValue {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--primary-deep);
+}
+
+@media (max-width: 991px) {
+  .boatGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .boatImageWrapper {
+    order: 2;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+/* Meal Section */
+.mealGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.mealText {
+  display: flex;
+  flex-direction: column;
+}
+
+.mealTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.mealTags span {
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--primary-deep);
+  background-color: #f1f5f9;
+  padding: 8px 16px;
+  border-radius: 30px;
+  box-shadow: var(--shadow-sm);
+}
+
+.mealImageWrapper {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-premium);
+}
+
+.mealImg {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform var(--transition-slow);
+}
+
+.mealImg:hover {
+  transform: scale(1.02);
+}
+
+@media (max-width: 991px) {
+  .mealGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .mealImageWrapper {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+/* CTA Section */
+.ctaSection {
+  background: linear-gradient(135deg, var(--primary-deep) 0%, var(--secondary-teal) 100%);
+  color: #ffffff;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.ctaContent {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ctaContent h2 {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  font-weight: 800;
+}
+
+.ctaContent p {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 24px;
+}
+
+.ctaActions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.ctaWhatsapp {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  background-color: #25D366;
+  color: #ffffff;
+  padding: 16px 28px;
+  border-radius: 50px;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
+  transition: all var(--transition-fast);
+}
+
+.ctaWhatsapp:hover {
+  background-color: #20ba59;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.5);
+}
+
+.ctaTours {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  background-color: transparent;
+  color: #ffffff;
+  padding: 16px 28px;
+  border-radius: 50px;
+  border: 2px solid #ffffff;
+  transition: all var(--transition-fast);
+}
+
+.ctaTours:hover {
+  background-color: #ffffff;
+  color: var(--primary-deep);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 576px) {
+  .ctaActions {
+    flex-direction: column;
+    width: 100%;
+    padding: 0 20px;
+  }
+  .ctaWhatsapp, .ctaTours {
+    width: 100%;
+    text-align: center;
+  }
+}
